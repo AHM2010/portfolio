@@ -15,15 +15,7 @@ Individual project demos are linked from their cards on the portfolio.
 
 ## Screenshots
 
-No full-page portfolio screenshots are currently included. The repository contains the project preview images used by the portfolio cards:
-
-| Dahab Menu                                                    | To-Do List                                                        |
-| ------------------------------------------------------------- | ----------------------------------------------------------------- |
-| ![Dahab Menu project preview](./images/dahab-menu-screen.png) | ![To-Do List project preview](./images/to-do-list-app-screen.png) |
-
-| Electro E-commerce                                                     | Advice Me                                                   |
-| ---------------------------------------------------------------------- | ----------------------------------------------------------- |
-| ![Electro e-commerce project preview](./images/electro-app-screen.png) | ![Advice Me project preview](./images/advice-me-screen.png) |
+![Portfolio full-page screenshot](./images/portfolio-screen.png)
 
 ## Features
 
