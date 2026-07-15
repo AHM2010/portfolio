@@ -16,6 +16,8 @@ Individual project demos are linked from their cards on the portfolio.
 ## Screenshots
 
 ![Portfolio full-page screenshot](./images/portfolio-screen.png)
+![Projects screenshot](./images/projects-screen.png)
+![Skills and About Me screen](./images/skills-aboutMe-screen.png)
 
 ## Features
 
