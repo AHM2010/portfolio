@@ -9,7 +9,7 @@ A responsive, single-page developer portfolio presenting Ahmed Ashraf's projects
 
 ## Live Demo
 
-> **Coming soon:** https://ahm2010.github.io/portfolio/
+> **Demo URL:** https://ahm2010.github.io/portfolio/
 
 Individual project demos are linked from their cards on the portfolio.
 
