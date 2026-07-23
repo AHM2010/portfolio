@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useState } from "react";
 import { FiChevronDown, FiGithub } from "react-icons/fi";
 import type { Project } from "@/types";
 import { Badge, ButtonLink } from "./ui";
+import { ProjectImageSlider } from "./project-image-slider";
 
 export function ProjectCard({
   project,
@@ -18,16 +18,11 @@ export function ProjectCard({
   const reduceMotion = useReducedMotion();
   return (
     <article className="group overflow-hidden rounded-[22px] border border-[#dcd7cc] bg-[#fffdf8] transition duration-300 hover:-translate-y-1.5 hover:shadow-soft dark:border-[#33352e] dark:bg-[#191a16]">
-      <div className="relative aspect-[16/8.3] overflow-hidden bg-neutral-200">
-        <Image
-          className="object-cover transition duration-500 group-hover:scale-[1.025]"
-          src={project.image}
-          alt={`${project.title} interface preview`}
-          fill
-          sizes="(max-width: 760px) 100vw, 50vw"
-          priority={priority}
-        />
-      </div>
+      <ProjectImageSlider
+        images={project.images}
+        galleryLabel={`${project.title} project screenshots`}
+        priority={priority}
+      />
       <div className="p-6">
         <h3 className="font-display text-2xl">{project.title}</h3>
         <p className="mt-2 text-[#62645d] dark:text-[#b0b0a7]">

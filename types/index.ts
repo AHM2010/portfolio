@@ -1,7 +1,12 @@
+export type ProjectImage = {
+  src: string;
+  alt: string;
+};
+
 export type Project = {
   title: string;
   description: string;
-  image: string;
+  images: ProjectImage[];
   technologies: string[];
   features: string[];
   categories: ProjectFilter[];

@@ -8,7 +8,8 @@ const buttonStyles = {
   secondary:
     "border border-[#dcd7cc] bg-[#fffdf8] hover:-translate-y-0.5 dark:border-[#33352e] dark:bg-[#191a16]",
   text: "px-2.5 hover:-translate-y-0.5",
-  contact: "border border-[#dcd7cc] bg-[#fffdf8] text-[#171813] hover:-translate-y-0.5 hover:bg-white dark:border-[#33352e] dark:bg-[#171813] dark:text-[#f3f0e8] dark:hover:bg-[#25271f]",
+  contact:
+    "border border-[#dcd7cc] bg-[#fffdf8] text-[#171813] hover:-translate-y-0.5 hover:bg-white dark:border-[#33352e] dark:bg-[#171813] dark:text-[#f3f0e8] dark:hover:bg-[#25271f]",
 } as const;
 
 export function Section({

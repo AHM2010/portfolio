@@ -47,7 +47,7 @@ export function Header() {
       <nav
         className={`pointer-events-auto relative mx-auto flex w-[min(1220px,calc(100%-20px))] animate-nav-enter items-center justify-between border border-[#52452b]/15 bg-[#fffdf8]/95 shadow-[0_14px_38px_rgba(57,47,27,.12)] backdrop-blur-xl transition-[height,width,border-radius,padding] duration-300 ease-out motion-reduce:animate-none dark:border-white/10 dark:bg-[#111412]/95 dark:shadow-[0_16px_42px_rgba(0,0,0,.18)] md:w-[min(1220px,calc(100%-40px))] ${
           scrolled
-            ? "h-[52px] rounded-[13px] px-2 md:h-14 md:w-[min(960px,calc(100%-64px))] md:px-3"
+            ? "h-[52px] rounded-[13px] px-2 md:h-16 md:w-[min(760px,calc(100%-64px))] md:px-3"
             : "h-16 rounded-[15px] px-3 md:h-[72px] md:rounded-[18px] md:px-[18px]"
         }`}
         aria-label="Main navigation"

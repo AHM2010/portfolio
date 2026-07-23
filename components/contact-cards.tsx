@@ -31,7 +31,7 @@ const cards = [
 
 export function ContactCards() {
   const card =
-    "flex min-h-24 items-start gap-3.5 rounded-[18px] border border-[#dcd7cc] bg-[#fffdf8] p-5 transition hover:-translate-y-1 hover:border-[#b98b24] dark:border-[#33352e] dark:bg-[#191a16]";
+    "flex min-h-24 items-start gap-3.5 rounded-[18px] border border-[#dcd7cc] bg-[#fffdf8] p-5 transition hover:-translate-y-1 hover:border-[#b98b24] dark:border-[#33352e] dark:hover:border-[#b98b24] dark:bg-[#191a16]";
   const staticCard =
     "flex min-h-24 items-start gap-3.5 rounded-[18px] border border-[#dcd7cc] bg-[#fffdf8] p-5 dark:border-[#33352e] dark:bg-[#191a16]";
   const content = (label: string, value: string) => (
@@ -53,10 +53,7 @@ export function ContactCards() {
             ? { target: "_blank", rel: "noreferrer" }
             : {})}
         >
-          <Icon
-            className="mt-1 shrink-0 text-lg text-[#8a6515] dark:hover:bg-[#e1b54e]"
-            aria-hidden
-          />
+          <Icon className="mt-1 shrink-0 text-lg text-[#8a6515]" aria-hidden />
           {content(label, value)}
         </Link>
       ))}

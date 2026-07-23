@@ -195,7 +195,10 @@ export default function Home() {
                   trying to solve. I’ll get back to you as soon as I can.
                 </p>
               </div>
-              <ButtonLink href="mailto:ahmed_ashraf2010@yahoo.com" variant="contact">
+              <ButtonLink
+                href="mailto:ahmed_ashraf2010@yahoo.com"
+                variant="contact"
+              >
                 Email Ahmed <FiMail />
               </ButtonLink>
             </Reveal>
@@ -220,11 +223,28 @@ export default function Home() {
             className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm font-bold text-[#62645d] dark:text-[#adb1aa]"
             aria-label="Footer navigation"
           >
-            {[["Projects","#projects"],["Skills","#skills"],["About","#about"],["Journey","#journey"],["Contact","#contact"]].map(([label,href]) => <Link className="group flex items-center transition hover:translate-x-1 hover:text-[#171813] dark:hover:text-white" href={href} key={href}>{label}<span className="ml-1 -translate-x-1 translate-y-1 text-[#b98b24] opacity-0 transition group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">↗</span></Link>)}
+            {[
+              ["Projects", "#projects"],
+              ["Skills", "#skills"],
+              ["About", "#about"],
+              ["Journey", "#journey"],
+              ["Contact", "#contact"],
+            ].map(([label, href]) => (
+              <Link
+                className="group flex items-center transition hover:translate-x-1 hover:text-[#171813] dark:hover:text-white"
+                href={href}
+                key={href}
+              >
+                {label}
+                <span className="ml-1 -translate-x-1 translate-y-1 text-[#b98b24] opacity-0 transition group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">
+                  ↗
+                </span>
+              </Link>
+            ))}
           </nav>
           <div className="flex items-center gap-2">
             <Link
-              className="grid size-10 place-items-center rounded-xl border border-[#dcd7cc] bg-[#171813]/5 transition hover:-translate-y-1 hover:border-[#b98b24] hover:bg-[#b98b24] hover:text-[#171813] dark:border-white/15 dark:bg-white/5"
+              className="grid size-10 place-items-center rounded-xl border border-[#dcd7cc] bg-[#171813]/5 transition hover:-translate-y-1 hover:border-[#8a6515] hover:bg-[#8a6515] dark:hover:text-[#e1b54e] dark:border-white/15 dark:bg-white/5"
               href={socialLinks.github}
               aria-label="GitHub"
               target="_blank"
@@ -232,7 +252,7 @@ export default function Home() {
               <FiGithub />
             </Link>
             <Link
-              className="grid size-10 place-items-center rounded-xl border border-[#dcd7cc] bg-[#171813]/5 transition hover:-translate-y-1 hover:border-[#b98b24] hover:bg-[#b98b24] hover:text-[#171813] dark:border-white/15 dark:bg-white/5"
+              className="grid size-10 place-items-center rounded-xl border border-[#dcd7cc] bg-[#171813]/5 transition hover:-translate-y-1 hover:border-[#8a6515] hover:bg-[#8a6515] dark:hover:text-[#e1b54e] dark:border-white/15 dark:bg-white/5"
               href={socialLinks.linkedin}
               aria-label="LinkedIn"
               target="_blank"
@@ -240,7 +260,7 @@ export default function Home() {
               <FiLinkedin />
             </Link>
             <Link
-              className="grid size-10 place-items-center rounded-xl border border-[#dcd7cc] bg-[#171813]/5 transition hover:-translate-y-1 hover:border-[#b98b24] hover:bg-[#b98b24] hover:text-[#171813] dark:border-white/15 dark:bg-white/5"
+              className="grid size-10 place-items-center rounded-xl border border-[#dcd7cc] bg-[#171813]/5 transition hover:-translate-y-1 hover:border-[#8a6515] hover:bg-[#8a6515] dark:hover:text-[#e1b54e] dark:border-white/15 dark:bg-white/5"
               href="mailto:ahmed_ashraf2010@yahoo.com"
               aria-label="Email"
             >
