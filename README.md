@@ -2,7 +2,7 @@
 
 A responsive, accessible portfolio for presenting my front-end work, technical skills, learning journey, and contact information.
 
-[View the live portfolio](https://ahm2010.vercel.app)
+[View the live portfolio](ahmed-portfolio-mu-lovat.vercel.app)
 
 ## Preview
 
@@ -14,8 +14,8 @@ A responsive, accessible portfolio for presenting my front-end work, technical s
   />
 </p>
 
-| Nexora CRM showcase | Projects in dark mode |
-| --- | --- |
+| Nexora CRM showcase                                                                                                 | Projects in dark mode                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | <img src="public/readme/portfolio-crm-gallery.png" alt="Nexora CRM project showcase with image gallery controls" /> | <img src="public/readme/portfolio-projects-dark.png" alt="Portfolio project collection in dark mode" /> |
 
 <p align="center">
@@ -99,7 +99,7 @@ images: [
     src: "/screenshots/project-dashboard.png",
     alt: "Project analytics dashboard",
   },
-]
+];
 ```
 
 The shared gallery displays a standard image for one entry and enables the complete carousel experience when two or more entries are provided.
