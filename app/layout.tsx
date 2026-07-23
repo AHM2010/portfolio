@@ -49,7 +49,9 @@ export const metadata: Metadata = {
     description:
       "Thoughtful, accessible web experiences built with modern front-end tools.",
   },
-  icons: { icon: "/images/logo.jpeg", apple: "/images/logo.jpeg" },
+  appleWebApp: {
+    title: "Ahmed Ashraf",
+  },
 };
 
 export const viewport: Viewport = {
