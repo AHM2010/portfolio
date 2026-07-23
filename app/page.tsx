@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <>
       <a
-        className="fixed -top-16 left-3 z-[999] rounded-lg bg-[#171813] px-4 py-2 text-[#f6f2e9] focus:top-3"
+        className="fixed -top-16 left-3 z-999 rounded-lg bg-ink px-4 py-2 text-cream focus:top-3"
         href="#main"
       >
         Skip to main content
@@ -42,7 +42,7 @@ export default function Home() {
               I build digital experiences that feel <em>clear, useful,</em> and
               human.
             </h1>
-            <p className="mb-8 max-w-2xl text-lg text-[#62645d] dark:text-[#b0b0a7]">
+            <p className="mb-8 max-w-2xl text-lg text-muted dark:text-[#b0b0a7]">
               I’m Ahmed Ashraf, a front-end developer based in Saudi Arabia. I
               turn product ideas into responsive, accessible interfaces using
               React, Next.js, and TypeScript.
@@ -53,13 +53,13 @@ export default function Home() {
               </ButtonLink>
               <span className="grid text-center">
                 <span
-                  className="inline-flex min-h-12 cursor-not-allowed items-center gap-2 rounded-[14px] border border-[#dcd7cc] bg-[#fffdf8] px-5 font-bold opacity-60 dark:border-[#33352e] dark:bg-[#191a16]"
+                  className="inline-flex min-h-12 cursor-not-allowed items-center gap-2 rounded-[14px] border border-[#dcd7cc] bg-paper px-5 font-bold opacity-60 dark:border-[#33352e] dark:bg-[#191a16]"
                   aria-disabled="true"
                 >
                   <FiDownload />
                   Download CV
                 </span>
-                <small className="text-[.65rem] text-[#62645d] dark:text-[#b0b0a7]">
+                <small className="text-[.65rem] text-muted dark:text-[#b0b0a7]">
                   CV coming soon
                 </small>
               </span>
@@ -67,7 +67,7 @@ export default function Home() {
                 Contact me
               </ButtonLink>
             </div>
-            <div className="mt-8 flex flex-wrap gap-6 text-sm text-[#62645d] dark:text-[#b0b0a7]">
+            <div className="mt-8 flex flex-wrap gap-6 text-sm text-muted dark:text-[#b0b0a7]">
               <span className="flex items-center gap-2">
                 <FiMapPin />
                 Al Madinah, Saudi Arabia
@@ -77,9 +77,9 @@ export default function Home() {
           </Reveal>
           <Reveal
             delay={0.12}
-            className="relative mx-auto aspect-[4/5] w-full max-w-lg"
+            className="relative mx-auto aspect-4/5 w-full max-w-lg"
           >
-            <div className="absolute -inset-x-4 -top-4 bottom-6 rounded-[180px_180px_34px_34px] border border-[#b98b24]" />
+            <div className="absolute -inset-x-4 -top-4 bottom-6 rounded-[180px_180px_34px_34px] border border-gold" />
             <Image
               src="/images/logo.jpeg"
               fill
@@ -88,8 +88,8 @@ export default function Home() {
               alt="Ahmed Ashraf wearing a dark suit"
               className="rounded-[160px_160px_24px_24px] object-cover object-[54%_35%] saturate-[.78] shadow-soft"
             />
-            <div className="absolute bottom-7 right-0 grid rounded-2xl border border-[#dcd7cc] bg-[#fffdf8] px-4 py-3 shadow-soft md:-right-7 dark:border-[#33352e] dark:bg-[#191a16]">
-              <span className="text-[.7rem] uppercase tracking-wider text-[#62645d] dark:text-[#b0b0a7]">
+            <div className="absolute bottom-7 right-0 grid rounded-2xl border border-[#dcd7cc] bg-paper px-4 py-3 shadow-soft md:-right-7 dark:border-[#33352e] dark:bg-[#191a16]">
+              <span className="text-[.7rem] uppercase tracking-wider text-muted dark:text-[#b0b0a7]">
                 Current focus
               </span>
               <strong>Next.js · TypeScript · UI systems</strong>
@@ -119,7 +119,7 @@ export default function Home() {
                 <Reveal
                   key={group.title}
                   delay={i * 0.08}
-                  className="min-h-64 rounded-[22px] border border-[#dcd7cc] bg-[#fffdf8] p-7 dark:border-[#33352e] dark:bg-[#191a16]"
+                  className="min-h-64 rounded-[22px] border border-[#dcd7cc] bg-paper p-7 dark:border-[#33352e] dark:bg-[#191a16]"
                 >
                   <span className="font-display text-sm text-[#8a6515] dark:text-[#e1b54e]">
                     0{i + 1}
@@ -127,7 +127,7 @@ export default function Home() {
                   <h3 className="mb-2 mt-8 font-display text-3xl">
                     {group.title}
                   </h3>
-                  <p className="text-[#62645d] dark:text-[#b0b0a7]">
+                  <p className="text-muted dark:text-[#b0b0a7]">
                     {group.description}
                   </p>
                   <div className="mt-7 flex flex-wrap gap-2">
@@ -154,7 +154,7 @@ export default function Home() {
               </Reveal>
               <Reveal
                 delay={0.08}
-                className="space-y-5 text-lg text-[#62645d] dark:text-[#b0b0a7]"
+                className="space-y-5 text-lg text-muted dark:text-[#b0b0a7]"
               >
                 <p>
                   I specialize in responsive React interfaces and I’m developing
@@ -185,7 +185,7 @@ export default function Home() {
             title="Have a role or project in mind?"
             intro="I’m open to front-end opportunities, freelance projects, and conversations with other builders."
           >
-            <Reveal className="flex flex-col items-start justify-between gap-8 rounded-[28px] bg-[#b98b24] p-7 text-[#171813] md:flex-row md:items-center md:p-12">
+            <Reveal className="flex flex-col items-start justify-between gap-8 rounded-[28px] bg-gold p-7 text-ink md:flex-row md:items-center md:p-12">
               <div>
                 <h3 className="font-display text-4xl">
                   Let’s make something useful.
@@ -207,12 +207,12 @@ export default function Home() {
         </div>
       </main>
       <footer className="relative overflow-hidden py-7">
-        <div className="relative mx-auto grid min-h-44 w-[min(1160px,calc(100%-28px))] gap-8 overflow-hidden rounded-[26px] border border-[#dcd7cc] bg-[#fffdf8] p-7 text-[#171813] shadow-soft before:absolute before:inset-x-0 before:top-0 before:h-0.5 before:animate-footer-shimmer before:bg-gradient-to-r before:from-transparent before:via-[#b98b24] before:to-transparent before:bg-[length:45%_100%] before:bg-no-repeat motion-reduce:before:animate-none md:grid-cols-[1fr_auto_auto] md:items-end md:p-11 dark:border-white/10 dark:bg-[#151815] dark:text-[#e8e9e4] dark:shadow-2xl">
+        <div className="relative mx-auto grid min-h-44 w-[min(1160px,calc(100%-28px))] gap-8 overflow-hidden rounded-[26px] border border-[#dcd7cc] bg-paper p-7 text-ink shadow-soft before:absolute before:inset-x-0 before:top-0 before:h-0.5 before:animate-footer-shimmer before:bg-linear-to-r before:from-transparent before:via-gold before:to-transparent before:bg-size-[45%_100%] before:bg-no-repeat motion-reduce:before:animate-none md:grid-cols-[1fr_auto_auto] md:items-end md:p-11 dark:border-white/10 dark:bg-[#151815] dark:text-[#e8e9e4] dark:shadow-2xl">
           <div className="grid self-stretch">
             <span className="text-xs font-bold uppercase tracking-widest text-[#d8ae4a]">
               Let’s keep in touch
             </span>
-            <strong className="mt-auto font-display text-3xl text-[#171813] dark:text-white">
+            <strong className="mt-auto font-display text-3xl text-ink dark:text-white">
               Ahmed Ashraf
             </strong>
             <p className="text-sm text-[#989d95]">
@@ -220,7 +220,7 @@ export default function Home() {
             </p>
           </div>
           <nav
-            className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm font-bold text-[#62645d] dark:text-[#adb1aa]"
+            className="grid grid-cols-2 gap-x-6 gap-y-2 text-sm font-bold text-muted dark:text-[#adb1aa]"
             aria-label="Footer navigation"
           >
             {[
@@ -231,12 +231,12 @@ export default function Home() {
               ["Contact", "#contact"],
             ].map(([label, href]) => (
               <Link
-                className="group flex items-center transition hover:translate-x-1 hover:text-[#171813] dark:hover:text-white"
+                className="group flex items-center transition hover:translate-x-1 hover:text-ink dark:hover:text-white"
                 href={href}
                 key={href}
               >
                 {label}
-                <span className="ml-1 -translate-x-1 translate-y-1 text-[#b98b24] opacity-0 transition group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">
+                <span className="ml-1 -translate-x-1 translate-y-1 text-gold opacity-0 transition group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">
                   ↗
                 </span>
               </Link>
@@ -244,7 +244,7 @@ export default function Home() {
           </nav>
           <div className="flex items-center gap-2">
             <Link
-              className="grid size-10 place-items-center rounded-xl border border-[#dcd7cc] bg-[#171813]/5 transition hover:-translate-y-1 hover:border-[#8a6515] hover:bg-[#8a6515] dark:hover:text-[#e1b54e] dark:border-white/15 dark:bg-white/5"
+              className="grid size-10 place-items-center rounded-xl border border-[#dcd7cc] bg-ink/5 transition hover:-translate-y-1 hover:border-[#8a6515] hover:bg-[#8a6515] dark:hover:text-[#e1b54e] dark:border-white/15 dark:bg-white/5"
               href={socialLinks.github}
               aria-label="GitHub"
               target="_blank"
@@ -252,7 +252,7 @@ export default function Home() {
               <FiGithub />
             </Link>
             <Link
-              className="grid size-10 place-items-center rounded-xl border border-[#dcd7cc] bg-[#171813]/5 transition hover:-translate-y-1 hover:border-[#8a6515] hover:bg-[#8a6515] dark:hover:text-[#e1b54e] dark:border-white/15 dark:bg-white/5"
+              className="grid size-10 place-items-center rounded-xl border border-[#dcd7cc] bg-ink/5 transition hover:-translate-y-1 hover:border-[#8a6515] hover:bg-[#8a6515] dark:hover:text-[#e1b54e] dark:border-white/15 dark:bg-white/5"
               href={socialLinks.linkedin}
               aria-label="LinkedIn"
               target="_blank"
@@ -260,7 +260,7 @@ export default function Home() {
               <FiLinkedin />
             </Link>
             <Link
-              className="grid size-10 place-items-center rounded-xl border border-[#dcd7cc] bg-[#171813]/5 transition hover:-translate-y-1 hover:border-[#8a6515] hover:bg-[#8a6515] dark:hover:text-[#e1b54e] dark:border-white/15 dark:bg-white/5"
+              className="grid size-10 place-items-center rounded-xl border border-[#dcd7cc] bg-ink/5 transition hover:-translate-y-1 hover:border-[#8a6515] hover:bg-[#8a6515] dark:hover:text-[#e1b54e] dark:border-white/15 dark:bg-white/5"
               href="mailto:ahmed_ashraf2010@yahoo.com"
               aria-label="Email"
             >

@@ -31,15 +31,15 @@ const cards = [
 
 export function ContactCards() {
   const card =
-    "flex min-h-24 items-start gap-3.5 rounded-[18px] border border-[#dcd7cc] bg-[#fffdf8] p-5 transition hover:-translate-y-1 hover:border-[#b98b24] dark:border-[#33352e] dark:hover:border-[#b98b24] dark:bg-[#191a16]";
+    "flex min-h-24 items-start gap-3.5 rounded-[18px] border border-[#dcd7cc] bg-paper p-5 transition hover:-translate-y-1 hover:border-gold dark:border-[#33352e] dark:hover:border-gold dark:bg-[#191a16]";
   const staticCard =
-    "flex min-h-24 items-start gap-3.5 rounded-[18px] border border-[#dcd7cc] bg-[#fffdf8] p-5 dark:border-[#33352e] dark:bg-[#191a16]";
+    "flex min-h-24 items-start gap-3.5 rounded-[18px] border border-[#dcd7cc] bg-paper p-5 dark:border-[#33352e] dark:bg-[#191a16]";
   const content = (label: string, value: string) => (
     <span className="grid min-w-0">
-      <small className="text-[.68rem] uppercase tracking-wider text-[#62645d] dark:text-[#b0b0a7]">
+      <small className="text-[.68rem] uppercase tracking-wider text-muted dark:text-[#b0b0a7]">
         {label}
       </small>
-      <strong className="break-words text-sm">{value}</strong>
+      <strong className="wrap-break-word text-sm">{value}</strong>
     </span>
   );
   return (

@@ -102,7 +102,7 @@ export function CrmShowcase() {
         images={crmImages}
         galleryLabel="Nexora CRM project screenshots"
         priority
-        aspectClassName="aspect-[16/10]"
+        aspectClassName="aspect-16/10"
         className="mt-9 self-center rounded-[20px] border border-[#363a31] bg-[#0d0f0c] shadow-2xl lg:mt-0"
       />
       <div className="col-span-full mt-8 border-t border-[#34372f] pt-5">

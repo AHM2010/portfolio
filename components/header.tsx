@@ -45,7 +45,7 @@ export function Header() {
       }`}
     >
       <nav
-        className={`pointer-events-auto relative mx-auto flex w-[min(1220px,calc(100%-20px))] animate-nav-enter items-center justify-between border border-[#52452b]/15 bg-[#fffdf8]/95 shadow-[0_14px_38px_rgba(57,47,27,.12)] backdrop-blur-xl transition-[height,width,border-radius,padding] duration-300 ease-out motion-reduce:animate-none dark:border-white/10 dark:bg-[#111412]/95 dark:shadow-[0_16px_42px_rgba(0,0,0,.18)] md:w-[min(1220px,calc(100%-40px))] ${
+        className={`pointer-events-auto relative mx-auto flex w-[min(1220px,calc(100%-20px))] animate-nav-enter items-center justify-between border border-[#52452b]/15 bg-paper/95 shadow-[0_14px_38px_rgba(57,47,27,.12)] backdrop-blur-xl transition-[height,width,border-radius,padding] duration-300 ease-out motion-reduce:animate-none dark:border-white/10 dark:bg-[#111412]/95 dark:shadow-[0_16px_42px_rgba(0,0,0,.18)] md:w-[min(1220px,calc(100%-40px))] ${
           scrolled
             ? "h-[52px] rounded-[13px] px-2 md:h-16 md:w-[min(760px,calc(100%-64px))] md:px-3"
             : "h-16 rounded-[15px] px-3 md:h-[72px] md:rounded-[18px] md:px-[18px]"
@@ -73,7 +73,7 @@ export function Header() {
         <div className="ml-7 mr-auto hidden gap-2 min-[981px]:flex">
           {links.map((link) => (
             <Link
-              className="relative rounded-[10px] px-3.5 py-2.5 text-sm font-bold text-[#272820] transition after:absolute after:bottom-1 after:left-3.5 after:right-3.5 after:h-0.5 after:origin-center after:scale-x-0 after:rounded after:bg-[#b98b24] after:transition-transform hover:bg-[#b98b24]/10 hover:after:scale-x-100 dark:text-[#c4c8c1] dark:hover:bg-white/10 dark:hover:text-white"
+              className="relative rounded-[10px] px-3.5 py-2.5 text-sm font-bold text-[#272820] transition after:absolute after:bottom-1 after:left-3.5 after:right-3.5 after:h-0.5 after:origin-center after:scale-x-0 after:rounded-sm after:bg-gold after:transition-transform hover:bg-gold/10 hover:after:scale-x-100 dark:text-[#c4c8c1] dark:hover:bg-white/10 dark:hover:text-white"
               key={link}
               href={`#${link.toLowerCase()}`}
             >
@@ -84,7 +84,7 @@ export function Header() {
 
         <div className="flex items-center gap-1 md:gap-2">
           <Link
-            className={`group hidden size-[42px] items-center justify-center overflow-hidden rounded-xl text-[#272820] transition-[width,opacity,transform,padding,margin] duration-300 ease-out hover:-translate-y-0.5 hover:bg-[#b98b24]/10 min-[561px]:flex min-[981px]:gap-2 dark:text-[#d9dcd5] dark:hover:bg-white/10 ${
+            className={`group hidden size-[42px] items-center justify-center overflow-hidden rounded-xl text-[#272820] transition-[width,opacity,transform,padding,margin] duration-300 ease-out hover:-translate-y-0.5 hover:bg-gold/10 min-[561px]:flex min-[981px]:gap-2 dark:text-[#d9dcd5] dark:hover:bg-white/10 ${
               scrolled
                 ? "pointer-events-none min-[561px]:w-0 min-[561px]:scale-90 min-[561px]:opacity-0 min-[981px]:px-0"
                 : "min-[981px]:w-auto min-[981px]:px-3"
@@ -98,16 +98,16 @@ export function Header() {
             <span className="hidden min-[981px]:inline">GitHub</span>
           </Link>
           <button
-            className="group grid size-10 place-items-center rounded-xl border border-[#52452b]/15 bg-[#272820]/5 text-[#272820] transition hover:-translate-y-0.5 hover:border-[#b98b24]/40 hover:bg-[#b98b24]/10 hover:text-[#8a6515] active:scale-95 md:size-[42px] dark:border-white/15 dark:bg-white/5 dark:text-[#f5f2e9] dark:hover:bg-white/10"
+            className="group grid size-10 place-items-center rounded-xl border border-[#52452b]/15 bg-[#272820]/5 text-[#272820] transition hover:-translate-y-0.5 hover:border-gold/40 hover:bg-gold/10 hover:text-[#8a6515] active:scale-95 md:size-[42px] dark:border-white/15 dark:bg-white/5 dark:text-[#f5f2e9] dark:hover:bg-white/10"
             onClick={toggleTheme}
             aria-label={`Switch to ${dark ? "light" : "dark"} mode`}
           >
-            <span className="transition-transform duration-300 group-hover:rotate-[14deg] group-hover:scale-110">
+            <span className="transition-transform duration-300 group-hover:rotate-14 group-hover:scale-110">
               {dark ? <FiSun /> : <FiMoon />}
             </span>
           </button>
           <Link
-            className="group hidden h-[42px] items-center gap-2 rounded-xl bg-[#b98b24] px-4 text-sm font-bold text-[#171813] transition hover:-translate-y-0.5 hover:bg-[#d4aa47] min-[981px]:flex"
+            className="group hidden h-[42px] items-center gap-2 rounded-xl bg-gold px-4 text-sm font-bold text-ink transition hover:-translate-y-0.5 hover:bg-[#d4aa47] min-[981px]:flex"
             href="#contact"
           >
             Contact{" "}
@@ -130,11 +130,11 @@ export function Header() {
         {open && (
           <div
             id="mobile-menu"
-            className="absolute left-0 right-0 top-[72px] grid origin-top animate-menu-enter rounded-2xl border border-[#52452b]/15 bg-[#fffdf8]/95 p-2.5 shadow-soft backdrop-blur-xl motion-reduce:animate-none md:top-20 dark:border-white/10 dark:bg-[#151815]/95"
+            className="absolute left-0 right-0 top-[72px] grid origin-top animate-menu-enter rounded-2xl border border-[#52452b]/15 bg-paper/95 p-2.5 shadow-soft backdrop-blur-xl motion-reduce:animate-none md:top-20 dark:border-white/10 dark:bg-[#151815]/95"
           >
             {[...links, "Contact"].map((link) => (
               <Link
-                className="rounded-xl px-3.5 py-3 font-bold text-[#3f4038] transition hover:bg-[#b98b24]/10 dark:text-[#d7dad3] dark:hover:bg-white/10 dark:hover:text-white"
+                className="rounded-xl px-3.5 py-3 font-bold text-[#3f4038] transition hover:bg-gold/10 dark:text-[#d7dad3] dark:hover:bg-white/10 dark:hover:text-white"
                 key={link}
                 href={`#${link.toLowerCase()}`}
                 onClick={() => setOpen(false)}

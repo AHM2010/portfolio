@@ -4,12 +4,12 @@ import { FiArrowUpRight } from "react-icons/fi";
 
 const buttonStyles = {
   primary:
-    "bg-[#171813] text-[#f6f2e9] hover:-translate-y-0.5 hover:bg-[#8a6515] hover:text-white dark:bg-[#f3f0e8] dark:text-[#11120f]",
+    "bg-ink text-cream hover:-translate-y-0.5 hover:bg-[#8a6515] hover:text-white dark:bg-[#f3f0e8] dark:text-[#11120f]",
   secondary:
-    "border border-[#dcd7cc] bg-[#fffdf8] hover:-translate-y-0.5 dark:border-[#33352e] dark:bg-[#191a16]",
+    "border border-[#dcd7cc] bg-paper hover:-translate-y-0.5 dark:border-[#33352e] dark:bg-[#191a16]",
   text: "px-2.5 hover:-translate-y-0.5",
   contact:
-    "border border-[#dcd7cc] bg-[#fffdf8] text-[#171813] hover:-translate-y-0.5 hover:bg-white dark:border-[#33352e] dark:bg-[#171813] dark:text-[#f3f0e8] dark:hover:bg-[#25271f]",
+    "border border-[#dcd7cc] bg-paper text-ink hover:-translate-y-0.5 hover:bg-white dark:border-[#33352e] dark:bg-ink dark:text-[#f3f0e8] dark:hover:bg-[#25271f]",
 } as const;
 
 export function Section({
@@ -39,7 +39,7 @@ export function Section({
             {title}
           </h2>
         </div>
-        <p className="m-0 text-base text-[#62645d] dark:text-[#b0b0a7]">
+        <p className="m-0 text-base text-muted dark:text-[#b0b0a7]">
           {intro}
         </p>
       </div>
@@ -73,7 +73,7 @@ export function ButtonLink({
 
 export function Badge({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center rounded-full border border-[#dcd7cc] bg-[#fffdf8]/70 px-3 py-1.5 text-xs font-semibold text-[#62645d] dark:border-[#3a3e34] dark:bg-[#20231d] dark:text-[#e0e0d8]">
+    <span className="inline-flex items-center rounded-full border border-[#dcd7cc] bg-paper/70 px-3 py-1.5 text-xs font-semibold text-muted dark:border-[#3a3e34] dark:bg-[#20231d] dark:text-[#e0e0d8]">
       {children}
     </span>
   );

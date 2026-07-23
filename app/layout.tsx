@@ -71,7 +71,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body
-        className={`${sans.variable} ${display.variable} overflow-x-hidden bg-[#f6f2e9] font-sans leading-relaxed text-[#171813] transition-colors duration-300 selection:bg-[#b98b24] selection:text-[#171813] dark:bg-[#11120f] dark:text-[#f3f0e8]`}
+        className={`${sans.variable} ${display.variable} overflow-x-hidden bg-cream font-sans leading-relaxed text-ink transition-colors duration-300 selection:bg-gold selection:text-ink dark:bg-[#11120f] dark:text-[#f3f0e8]`}
       >
         {children}
       </body>

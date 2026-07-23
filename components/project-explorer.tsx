@@ -27,7 +27,7 @@ export function ProjectExplorer() {
           <button
             key={filter}
             type="button"
-            className={`whitespace-nowrap rounded-full border px-4 py-2 text-xs font-bold transition hover:-translate-y-0.5 hover:border-[#b98b24] ${active === filter ? "border-[#171813] bg-[#171813] text-[#f6f2e9] dark:border-[#f3f0e8] dark:bg-[#f3f0e8] dark:text-[#11120f]" : "border-[#dcd7cc] bg-[#fffdf8] text-[#62645d] dark:border-[#33352e] dark:bg-[#191a16] dark:text-[#b0b0a7]"}`}
+            className={`whitespace-nowrap rounded-full border px-4 py-2 text-xs font-bold transition hover:-translate-y-0.5 hover:border-gold ${active === filter ? "border-ink bg-ink text-cream dark:border-[#f3f0e8] dark:bg-[#f3f0e8] dark:text-[#11120f]" : "border-[#dcd7cc] bg-paper text-muted dark:border-[#33352e] dark:bg-[#191a16] dark:text-[#b0b0a7]"}`}
             aria-pressed={active === filter}
             onClick={() => setActive(filter)}
           >
@@ -36,7 +36,7 @@ export function ProjectExplorer() {
         ))}
       </div>
       <p
-        className="mt-2 text-xs text-[#62645d] dark:text-[#b0b0a7]"
+        className="mt-2 text-xs text-muted dark:text-[#b0b0a7]"
         aria-live="polite"
       >
         Showing {visible.length} {visible.length === 1 ? "project" : "projects"}
