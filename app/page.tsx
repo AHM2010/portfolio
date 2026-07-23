@@ -31,7 +31,7 @@ export default function Home() {
       <main id="main">
         <section
           id="top"
-          className="mx-auto grid min-h-[calc(100vh-88px)] w-[min(1160px,calc(100%-28px))] items-center gap-16 py-16 lg:grid-cols-[1.18fr_.82fr] lg:gap-20 lg:py-24"
+          className="mx-auto grid min-h-[calc(100vh-88px)] w-[min(1160px,calc(100%-40px))] items-center gap-16 py-16 sm:w-[min(1160px,calc(100%-28px))] lg:grid-cols-[1.18fr_.82fr] lg:gap-20 lg:py-24"
         >
           <Reveal className="hero-copy">
             <p className="mb-5 text-xs font-bold uppercase tracking-[.15em] text-[#8a6515] dark:text-[#e1b54e]">
@@ -82,7 +82,7 @@ export default function Home() {
             delay={0.12}
             className="relative mx-auto aspect-4/5 w-full max-w-lg"
           >
-            <div className="absolute -inset-x-4 -top-4 bottom-6 rounded-[180px_180px_34px_34px] border border-gold" />
+            <div className="absolute inset-x-0 -top-4 bottom-6 rounded-[180px_180px_34px_34px] border border-gold sm:-inset-x-4" />
             <Image
               src="/images/logo.jpeg"
               fill
@@ -99,7 +99,7 @@ export default function Home() {
             </div>
           </Reveal>
         </section>
-        <div className="mx-auto w-[min(1160px,calc(100%-28px))]">
+        <div className="mx-auto w-[min(1160px,calc(100%-40px))] sm:w-[min(1160px,calc(100%-28px))]">
           <Section
             id="projects"
             eyebrow="Selected work"
@@ -210,7 +210,7 @@ export default function Home() {
         </div>
       </main>
       <footer className="relative overflow-hidden py-7">
-        <div className="relative mx-auto grid min-h-44 w-[min(1160px,calc(100%-28px))] gap-8 overflow-hidden rounded-[26px] border border-[#dcd7cc] bg-paper p-7 text-ink shadow-soft before:absolute before:inset-x-0 before:top-0 before:h-0.5 before:animate-footer-shimmer before:bg-linear-to-r before:from-transparent before:via-gold before:to-transparent before:bg-size-[45%_100%] before:bg-no-repeat motion-reduce:before:animate-none md:grid-cols-[1fr_auto_auto] md:items-end md:p-11 dark:border-white/10 dark:bg-[#151815] dark:text-[#e8e9e4] dark:shadow-2xl">
+        <div className="relative mx-auto grid min-h-44 w-[min(1160px,calc(100%-40px))] gap-8 overflow-hidden rounded-[26px] border border-[#dcd7cc] bg-paper p-7 text-ink shadow-soft before:absolute before:inset-x-0 before:top-0 before:h-0.5 before:animate-footer-shimmer before:bg-linear-to-r before:from-transparent before:via-gold before:to-transparent before:bg-size-[45%_100%] before:bg-no-repeat motion-reduce:before:animate-none sm:w-[min(1160px,calc(100%-28px))] md:grid-cols-[1fr_auto_auto] md:items-end md:p-11 dark:border-white/10 dark:bg-[#151815] dark:text-[#e8e9e4] dark:shadow-2xl">
           <div className="grid self-stretch">
             <span className="text-xs font-bold uppercase tracking-widest text-[#d8ae4a]">
               Let’s keep in touch

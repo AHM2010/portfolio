@@ -45,15 +45,15 @@ export function Header() {
 
   return (
     <header
-      className={`pointer-events-none sticky top-0 z-50 transition-[padding] duration-300 ease-out ${
-        scrolled ? "pt-1.5 md:pt-2" : "pt-2.5 md:pt-4"
+      className={`pointer-events-none sticky top-0 z-50 pt-2.5 transition-[padding] duration-300 ease-out ${
+        scrolled ? "min-[981px]:pt-2" : "min-[981px]:pt-4"
       }`}
     >
       <nav
-        className={`pointer-events-auto relative mx-auto flex w-[min(var(--nav-width),calc(100%-20px))] animate-nav-enter items-center justify-between border border-[#52452b]/15 bg-paper/95 shadow-[0_14px_38px_rgba(57,47,27,.12)] backdrop-blur-xl transition-[height,width,border-radius,padding] duration-300 ease-out motion-reduce:animate-none dark:border-white/10 dark:bg-[#111412]/95 dark:shadow-[0_16px_42px_rgba(0,0,0,.18)] md:w-[min(var(--nav-width),calc(100%-40px))] ${
+        className={`pointer-events-auto relative mx-auto flex h-16 w-[min(var(--nav-width),calc(100%-20px))] animate-nav-enter items-center justify-between rounded-[15px] border border-[#52452b]/15 bg-paper/95 px-3 shadow-[0_14px_38px_rgba(57,47,27,.12)] backdrop-blur-xl transition-[height,width,border-radius,padding] duration-300 ease-out motion-reduce:animate-none dark:border-white/10 dark:bg-[#111412]/95 dark:shadow-[0_16px_42px_rgba(0,0,0,.18)] md:w-[min(var(--nav-width),calc(100%-40px))] ${
           scrolled
-            ? "h-13 rounded-[13px] px-2 md:h-16 md:px-3"
-            : "h-16 rounded-[15px] px-3 md:h-18 md:rounded-[18px] md:px-4.5"
+            ? "min-[981px]:h-16 min-[981px]:rounded-[13px] min-[981px]:px-3"
+            : "min-[981px]:h-18 min-[981px]:rounded-[18px] min-[981px]:px-4.5"
         }`}
         style={
           {
@@ -68,8 +68,8 @@ export function Header() {
           aria-label="Ahmed Ashraf, home"
         >
           <Image
-            className={`rounded-xl border border-black/10 object-cover transition-[width,height,transform] duration-300 group-hover:-rotate-3 group-hover:scale-105 dark:border-white/15 ${
-              scrolled ? "size-8 md:size-9" : "size-9.5 md:size-10.5"
+            className={`size-9.5 rounded-xl border border-black/10 object-cover transition-[width,height,transform] duration-300 group-hover:-rotate-3 group-hover:scale-105 dark:border-white/15 ${
+              scrolled ? "min-[981px]:size-9" : "min-[981px]:size-10.5"
             }`}
             src="/images/logo.jpeg"
             width={42}
@@ -119,8 +119,8 @@ export function Header() {
             </span>
           </Link>
           <button
-            className={`group mr-1 grid place-items-center rounded-xl border border-[#52452b]/15 bg-[#272820]/5 text-[#272820] will-change-transform transition-[width,height,transform,background-color,border-color,color] duration-500 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-0.5 hover:border-gold/40 hover:bg-gold/10 hover:text-[#8a6515] active:scale-90 dark:border-white/15 dark:bg-white/5 dark:text-[#f5f2e9] dark:hover:bg-white/10 ${
-              scrolled ? "size-8.5" : "size-10 md:size-10.5"
+            className={`group mr-1 grid size-10 place-items-center rounded-xl border border-[#52452b]/15 bg-[#272820]/5 text-[#272820] will-change-transform transition-[width,height,transform,background-color,border-color,color] duration-500 ease-[cubic-bezier(.22,1,.36,1)] hover:-translate-y-0.5 hover:border-gold/40 hover:bg-gold/10 hover:text-[#8a6515] active:scale-90 dark:border-white/15 dark:bg-white/5 dark:text-[#f5f2e9] dark:hover:bg-white/10 ${
+              scrolled ? "min-[981px]:size-8.5" : "min-[981px]:size-10.5"
             }`}
             onClick={toggleTheme}
             aria-label={`Switch to ${dark ? "light" : "dark"} mode`}
@@ -157,9 +157,7 @@ export function Header() {
             />
           </Link>
           <button
-            className={`grid place-items-center rounded-xl border border-[#52452b]/15 bg-[#272820]/5 text-[#272820] transition-[width,height,transform] duration-500 active:scale-95 min-[981px]:hidden dark:border-white/15 dark:bg-white/5 dark:text-white ${
-              scrolled ? "size-8.5" : "size-10"
-            }`}
+            className="grid size-10 place-items-center rounded-xl border border-[#52452b]/15 bg-[#272820]/5 text-[#272820] transition-transform duration-300 active:scale-95 min-[981px]:hidden dark:border-white/15 dark:bg-white/5 dark:text-white"
             onClick={() => setOpen(!open)}
             aria-expanded={open}
             aria-controls="mobile-menu"
@@ -172,9 +170,7 @@ export function Header() {
         {open && (
           <div
             id="mobile-menu"
-            className={`absolute left-0 right-0 grid origin-top animate-menu-enter rounded-2xl border border-[#52452b]/15 bg-paper/95 p-2.5 shadow-soft backdrop-blur-xl transition-[top] duration-500 motion-reduce:animate-none dark:border-white/10 dark:bg-[#151815]/95 ${
-              scrolled ? "top-13 md:top-14" : "top-18 md:top-20"
-            }`}
+            className="absolute left-0 right-0 top-18 grid origin-top animate-menu-enter rounded-2xl border border-[#52452b]/15 bg-paper/95 p-2.5 shadow-soft backdrop-blur-xl motion-reduce:animate-none dark:border-white/10 dark:bg-[#151815]/95"
           >
             {[...links, "Contact"].map((link) => (
               <Link
