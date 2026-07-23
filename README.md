@@ -2,7 +2,7 @@
 
 A responsive, accessible portfolio for presenting my front-end work, technical skills, learning journey, and contact information.
 
-[View the live portfolio](ahmed-portfolio-mu-lovat.vercel.app)
+[View the live portfolio](https://ahmed-portfolio-mu-lovat.vercel.app/)
 
 ## Preview
 
