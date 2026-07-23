@@ -52,12 +52,48 @@ export function ProjectCard({
           )}
         </div>
         <div className="mt-6 border-t border-[#dcd7cc] pt-5 dark:border-[#33352e]">
-          <button className="flex w-full items-center justify-between text-left font-bold" type="button" aria-expanded={detailsOpen} aria-controls={`details-${project.title.replaceAll(" ", "-").toLowerCase()}`} onClick={() => setDetailsOpen((open) => !open)}>
+          <button
+            className="flex w-full items-center justify-between text-left font-bold"
+            type="button"
+            aria-expanded={detailsOpen}
+            aria-controls={`details-${project.title.replaceAll(" ", "-").toLowerCase()}`}
+            onClick={() => setDetailsOpen((open) => !open)}
+          >
             {detailsOpen ? "Hide project details" : "Read project details"}
-            <FiChevronDown className={`transition-transform duration-300 ${detailsOpen ? "rotate-180" : ""}`} aria-hidden />
+            <FiChevronDown
+              className={`transition-transform duration-300 ${detailsOpen ? "rotate-180" : ""}`}
+              aria-hidden
+            />
           </button>
           <AnimatePresence initial={false}>
-            {detailsOpen && <motion.div id={`details-${project.title.replaceAll(" ", "-").toLowerCase()}`} className="overflow-hidden" initial={reduceMotion ? false : { height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={reduceMotion ? { opacity: 0 } : { height: 0, opacity: 0 }} transition={{ duration: reduceMotion ? 0 : .32, ease: [0.22, 1, 0.36, 1] }}><motion.div className="mt-5 grid gap-5 sm:grid-cols-2" initial={reduceMotion ? false : { y: -8 }} animate={{ y: 0 }} exit={reduceMotion ? undefined : { y: -6 }} transition={{ duration: .25 }}><Detail title="Overview" text={project.overview} /><Detail title="Problem" text={project.problem} /><Detail title="Solution" text={project.solution} /><Detail title="What I learned" text={project.learned} /><Detail title="Challenges" text={project.challenges} /><Detail title="Future improvements" text={project.future} /></motion.div></motion.div>}
+            {detailsOpen && (
+              <motion.div
+                id={`details-${project.title.replaceAll(" ", "-").toLowerCase()}`}
+                className="overflow-hidden"
+                initial={reduceMotion ? false : { height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={reduceMotion ? { opacity: 0 } : { height: 0, opacity: 0 }}
+                transition={{
+                  duration: reduceMotion ? 0 : 0.32,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+              >
+                <motion.div
+                  className="mt-5 grid gap-5 sm:grid-cols-2"
+                  initial={reduceMotion ? false : { y: -8 }}
+                  animate={{ y: 0 }}
+                  exit={reduceMotion ? undefined : { y: -6 }}
+                  transition={{ duration: 0.25 }}
+                >
+                  <Detail title="Overview" text={project.overview} />
+                  <Detail title="Problem" text={project.problem} />
+                  <Detail title="Solution" text={project.solution} />
+                  <Detail title="What I learned" text={project.learned} />
+                  <Detail title="Challenges" text={project.challenges} />
+                  <Detail title="Future improvements" text={project.future} />
+                </motion.div>
+              </motion.div>
+            )}
           </AnimatePresence>
         </div>
       </div>

@@ -39,9 +39,7 @@ export function Section({
             {title}
           </h2>
         </div>
-        <p className="m-0 text-base text-muted dark:text-[#b0b0a7]">
-          {intro}
-        </p>
+        <p className="m-0 text-base text-muted dark:text-[#b0b0a7]">{intro}</p>
       </div>
       {children}
     </section>

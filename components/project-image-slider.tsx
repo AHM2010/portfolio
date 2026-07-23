@@ -7,13 +7,7 @@ import {
   useReducedMotion,
   type PanInfo,
 } from "framer-motion";
-import {
-  memo,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { memo, useCallback, useEffect, useRef, useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 type SliderImage = {
@@ -88,10 +82,7 @@ function ProjectImageSliderComponent({
     () => goTo(current - 1, -1),
     [current, goTo],
   );
-  const showNext = useCallback(
-    () => goTo(current + 1, 1),
-    [current, goTo],
-  );
+  const showNext = useCallback(() => goTo(current + 1, 1), [current, goTo]);
 
   useEffect(() => {
     if (
@@ -144,7 +135,7 @@ function ProjectImageSliderComponent({
   if (!hasMultipleImages) {
     return (
       <div
-        className={`relative overflow-hidden bg-neutral-200 dark:bg-[#252720] ${aspectClassName} ${className}`}
+        className={`group relative overflow-hidden bg-neutral-200 dark:bg-[#252720] ${aspectClassName} ${className}`}
       >
         {!isLoaded && (
           <div
@@ -153,7 +144,7 @@ function ProjectImageSliderComponent({
           />
         )}
         <Image
-          className={`object-cover transition-[opacity,transform] duration-500 group-hover:scale-[1.025] ${
+          className={`object-cover transition-[transform,opacity] duration-700 ease-out will-change-transform transform-gpu group-hover:scale-[1.03] ${
             isLoaded ? "opacity-100" : "opacity-0"
           }`}
           src={currentImage.src}
@@ -180,7 +171,8 @@ function ProjectImageSliderComponent({
       onMouseLeave={() => setHovered(false)}
       onFocusCapture={() => setFocused(true)}
       onBlurCapture={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget)) setFocused(false);
+        if (!event.currentTarget.contains(event.relatedTarget))
+          setFocused(false);
       }}
       onPointerDown={(event) => {
         if (event.pointerType === "touch") pauseAfterTouch();
@@ -208,7 +200,9 @@ function ProjectImageSliderComponent({
           className="absolute inset-0"
           custom={direction}
           initial={
-            reduceMotion ? { opacity: 0 } : { x: `${direction * 100}%`, opacity: 0.7 }
+            reduceMotion
+              ? { opacity: 0 }
+              : { x: `${direction * 100}%`, opacity: 0.7 }
           }
           animate={{ x: 0, opacity: 1 }}
           exit={
@@ -226,7 +220,7 @@ function ProjectImageSliderComponent({
           onDragEnd={handleDragEnd}
         >
           <Image
-            className={`select-none object-cover transition-[opacity,transform] duration-500 group-hover/slider:scale-[1.02] ${
+            className={`select-none object-cover transition-[transform,opacity] duration-700 ease-out will-change-transform transform-gpu group-hover/slider:scale-[1.03] ${
               isLoaded ? "opacity-100" : "opacity-0"
             }`}
             src={currentImage.src}
@@ -244,7 +238,7 @@ function ProjectImageSliderComponent({
 
       <button
         type="button"
-        className="absolute left-3 top-1/2 z-10 grid size-9 -translate-y-1/2 place-items-center rounded-full border border-white/25 bg-ink/70 text-white shadow-lg backdrop-blur-xs transition hover:scale-105 hover:bg-gold hover:text-ink focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white"
+        className="pointer-events-none absolute left-3 top-1/2 z-10 grid size-9 -translate-x-1 -translate-y-1/2 place-items-center rounded-full border border-white/25 bg-ink/70 text-white opacity-0 shadow-lg backdrop-blur-xs transition-[opacity,transform,background-color,color] duration-300 ease-out hover:scale-105 hover:bg-gold hover:text-ink focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white group-hover/slider:pointer-events-auto group-hover/slider:translate-x-0 group-hover/slider:opacity-100 group-focus-within/slider:pointer-events-auto group-focus-within/slider:translate-x-0 group-focus-within/slider:opacity-100 motion-reduce:transition-none [@media(hover:none)]:pointer-events-auto [@media(hover:none)]:translate-x-0 [@media(hover:none)]:opacity-100"
         onClick={showPrevious}
         aria-label="Show previous project image"
       >
@@ -252,14 +246,14 @@ function ProjectImageSliderComponent({
       </button>
       <button
         type="button"
-        className="absolute right-3 top-1/2 z-10 grid size-9 -translate-y-1/2 place-items-center rounded-full border border-white/25 bg-ink/70 text-white shadow-lg backdrop-blur-xs transition hover:scale-105 hover:bg-gold hover:text-ink focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white"
+        className="pointer-events-none absolute right-3 top-1/2 z-10 grid size-9 translate-x-1 -translate-y-1/2 place-items-center rounded-full border border-white/25 bg-ink/70 text-white opacity-0 shadow-lg backdrop-blur-xs transition-[opacity,transform,background-color,color] duration-300 ease-out hover:scale-105 hover:bg-gold hover:text-ink focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-white group-hover/slider:pointer-events-auto group-hover/slider:translate-x-0 group-hover/slider:opacity-100 group-focus-within/slider:pointer-events-auto group-focus-within/slider:translate-x-0 group-focus-within/slider:opacity-100 motion-reduce:transition-none [@media(hover:none)]:pointer-events-auto [@media(hover:none)]:translate-x-0 [@media(hover:none)]:opacity-100"
         onClick={showNext}
         aria-label="Show next project image"
       >
         <FiChevronRight aria-hidden />
       </button>
 
-      <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-ink/70 px-2.5 py-1.5 backdrop-blur-xs">
+      <div className="pointer-events-none absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 translate-y-1 items-center gap-1.5 rounded-full bg-ink/70 px-2.5 py-1.5 opacity-0 backdrop-blur-xs transition-[opacity,transform] duration-300 ease-out group-hover/slider:pointer-events-auto group-hover/slider:translate-y-0 group-hover/slider:opacity-100 group-focus-within/slider:pointer-events-auto group-focus-within/slider:translate-y-0 group-focus-within/slider:opacity-100 motion-reduce:transition-none [@media(hover:none)]:pointer-events-auto [@media(hover:none)]:translate-y-0 [@media(hover:none)]:opacity-100">
         {images.map((image, index) => (
           <button
             key={image.src}
@@ -276,7 +270,7 @@ function ProjectImageSliderComponent({
         ))}
       </div>
 
-      <span className="absolute right-3 top-3 z-10 rounded-full bg-ink/70 px-2.5 py-1 text-[.65rem] font-bold tabular-nums text-white backdrop-blur-xs">
+      <span className="pointer-events-none absolute right-3 top-3 z-10 rounded-full bg-ink/70 px-2.5 py-1 text-[.65rem] font-bold tabular-nums text-white opacity-0 backdrop-blur-xs transition-opacity duration-300 group-hover/slider:opacity-100 group-focus-within/slider:opacity-100 motion-reduce:transition-none [@media(hover:none)]:opacity-100">
         {current + 1} / {images.length}
       </span>
       <span className="sr-only" aria-live="polite" aria-atomic="true">

@@ -35,7 +35,10 @@ export default function Home() {
         >
           <Reveal className="hero-copy">
             <p className="mb-5 text-xs font-bold uppercase tracking-[.15em] text-[#8a6515] dark:text-[#e1b54e]">
-              <span className="mr-2.5 inline-block size-2 rounded-full bg-[#54a26c] shadow-[0_0_0_5px_rgba(84,162,108,.15)]" />
+              <span className="relative mr-2.5 inline-flex size-2" aria-hidden>
+                <span className="absolute inset-0 animate-ping rounded-full bg-[#54a26c]/65 [animation-duration:2s] motion-reduce:animate-none" />
+                <span className="relative size-2 rounded-full bg-[#54a26c] shadow-[0_0_0_5px_rgba(84,162,108,.15)]" />
+              </span>
               Available for junior / mid-level opportunities
             </p>
             <h1 className="mb-7 max-w-4xl font-display text-[clamp(3.4rem,6.7vw,6.4rem)] font-semibold leading-[.94] tracking-[-.055em] [&_em]:font-medium [&_em]:text-[#8a6515] dark:[&_em]:text-[#e1b54e]">

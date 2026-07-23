@@ -53,22 +53,22 @@ export function CrmShowcase() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <article className="grid overflow-hidden rounded-[30px] bg-[#1b1d18] p-5 text-[#f2f2ec] shadow-soft md:p-10 lg:grid-cols-[.9fr_1.1fr] lg:gap-12 lg:p-12">
+    <article className="grid overflow-hidden rounded-[30px] border border-[#d5c9aa] bg-[#eee8d9] p-5 text-[#272820] shadow-soft md:p-10 lg:grid-cols-[.9fr_1.1fr] lg:gap-12 lg:p-12 dark:border-transparent dark:bg-[#1b1d18] dark:text-[#f2f2ec]">
       <div>
-        <p className="text-xs font-bold uppercase tracking-widest text-[#dbb557]">
+        <p className="text-xs font-bold uppercase tracking-widest text-[#8a6515] dark:text-[#dbb557]">
           Flagship case study · In development
         </p>
         <h3 className="mt-4 font-display text-5xl leading-none">
           CRM Dashboard
         </h3>
-        <p className="mt-4 text-[#c4c6bd]">
+        <p className="mt-4 text-[#55574f] dark:text-[#c4c6bd]">
           A scalable workspace concept for helping small teams understand their
           pipeline, manage customer relationships, and keep daily work moving.
         </p>
-        <h4 className="mb-2 mt-7 text-xs font-bold uppercase tracking-widest text-[#dbb557]">
+        <h4 className="mb-2 mt-7 text-xs font-bold uppercase tracking-widest text-[#8a6515] dark:text-[#dbb557]">
           Project overview
         </h4>
-        <p className="text-[#bcbeb6]">
+        <p className="text-[#5e6058] dark:text-[#bcbeb6]">
           The planned interface brings analytics, contacts, deals, and tasks
           into a consistent system with typed data and reusable components.
         </p>
@@ -89,10 +89,13 @@ export function CrmShowcase() {
         <ul className="mt-6 grid gap-2 sm:grid-cols-2">
           {features.map((feature) => (
             <li
-              className="flex items-center gap-2 text-xs text-[#c5c7be]"
+              className="flex items-center gap-2 text-xs text-[#55574f] dark:text-[#c5c7be]"
               key={feature}
             >
-              <FiCheckCircle className="text-[#d9ad45]" aria-hidden />
+              <FiCheckCircle
+                className="text-[#9a7119] dark:text-[#d9ad45]"
+                aria-hidden
+              />
               {feature}
             </li>
           ))}
@@ -103,9 +106,9 @@ export function CrmShowcase() {
         galleryLabel="Nexora CRM project screenshots"
         priority
         aspectClassName="aspect-16/10"
-        className="mt-9 self-center rounded-[20px] border border-[#363a31] bg-[#0d0f0c] shadow-2xl lg:mt-0"
+        className="mt-9 self-center rounded-[20px] border border-[#cbbd99] bg-[#ddd4bd] shadow-2xl lg:mt-0 dark:border-[#363a31] dark:bg-[#0d0f0c]"
       />
-      <div className="col-span-full mt-8 border-t border-[#34372f] pt-5">
+      <div className="col-span-full mt-8 border-t border-[#cfc3a5] pt-5 dark:border-[#34372f]">
         <button
           className="flex w-full items-center justify-between text-left font-bold"
           type="button"
@@ -133,7 +136,7 @@ export function CrmShowcase() {
               }}
             >
               <motion.div
-                className="mt-5 grid gap-4 text-xs text-[#aeb1a8] sm:grid-cols-2 lg:grid-cols-5 [&_b]:block [&_b]:text-[#dfb956]"
+                className="mt-5 grid gap-4 text-xs text-[#5e6058] sm:grid-cols-2 lg:grid-cols-5 [&_b]:block [&_b]:text-[#8a6515] dark:text-[#aeb1a8] dark:[&_b]:text-[#dfb956]"
                 initial={reduceMotion ? false : { y: -8 }}
                 animate={{ y: 0 }}
                 exit={reduceMotion ? undefined : { y: -6 }}

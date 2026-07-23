@@ -68,7 +68,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{ __html: themeScript }}
+        />
       </head>
       <body
         className={`${sans.variable} ${display.variable} overflow-x-hidden bg-cream font-sans leading-relaxed text-ink transition-colors duration-300 selection:bg-gold selection:text-ink dark:bg-[#11120f] dark:text-[#f3f0e8]`}
