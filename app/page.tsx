@@ -84,7 +84,7 @@ export default function Home() {
           >
             <div className="absolute inset-x-0 -top-4 bottom-6 rounded-[180px_180px_34px_34px] border border-gold sm:-inset-x-4" />
             <Image
-              src="/images/logo.jpeg"
+              src="/logo/logo.jpeg"
               fill
               priority
               sizes="(max-width: 850px) 92vw, 38vw"

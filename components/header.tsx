@@ -71,7 +71,7 @@ export function Header() {
             className={`size-9.5 rounded-xl border border-black/10 object-cover transition-[width,height,transform] duration-300 group-hover:-rotate-3 group-hover:scale-105 dark:border-white/15 ${
               scrolled ? "min-[981px]:size-9" : "min-[981px]:size-10.5"
             }`}
-            src="/images/logo.jpeg"
+            src="/logo/logo.jpeg"
             width={42}
             height={42}
             alt=""
